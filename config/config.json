@@ -1,0 +1,57 @@
+{
+  "daemon-url" :
+  {
+    "_comment" : "RPC urls to knownero deamon",
+    "mainnet"  : "http://127.0.0.1:4368",
+    "testnet"  : "http://127.0.0.1:14368",
+    "stagenet" : "http://127.0.0.1:24368"
+  },
+  "blockchain-path" :
+  {
+    "_comment" : "if paths are empty, default Knownero paths will be used",
+    "mainnet"  : "",
+    "testnet"  : "",
+    "stagenet" : ""
+  },
+  "database" :
+  {
+    "_comment" : "how should the backend connect to the mysql database",
+    "url"      : "127.0.0.1",
+    "port"     : 3306,
+    "dbname"   : "imknownero",
+    "user"     : "root",
+    "password" : "123456"
+  },
+  "wallet_import" :
+  {
+    "_comment": "if fee is 0, then importing is free. fee is in base 1e2, e.g., 0.1 know is 0.1 x 1e2 = 100",
+    "fee"     : 0,
+    "testnet" :
+    {
+      "address" : "",
+      "viewkey" : ""
+    },
+    "mainnet" :
+    {
+      "_comment": "",
+      "address" : "",
+      "viewkey" : ""
+    },
+    "stagenet" :
+    {
+      "address" : "",
+      "viewkey" : ""
+    }
+  },
+  "refresh_block_status_every_seconds" : 10,
+  "search_thread_life_in_seconds"      : 300,
+  "max_number_of_blocks_to_import"     : 22000,
+  "ssl" :
+  {
+    "enable" : false,
+    "_comment": "below are example paths to crt and key files need to be given",
+    "ssl-key": "/tmp/server.key",
+    "ssl-crt": "/tmp/server.crt",
+    "dh-pem" : "/tmp/dh2048.pem"
+  }
+}
